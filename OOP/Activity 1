@@ -1,0 +1,50 @@
+using System;
+
+namespace Main
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+            const float SALES_QUOTA = 5000.00F;
+            const float BONUS_RATE = 0.065F;
+            string ask;
+            
+          do{
+                Console.Write("Enter Agent Name : ");
+                string AgentName = Console.ReadLine();
+                Console.Write("Enter Sales Amount : ");
+                float SalesAmount = float.Parse(Console.ReadLine());
+                Console.WriteLine("");
+                Console.WriteLine("Agent Name : " + AgentName);
+                Console.WriteLine("Sales Amount : " + SalesAmount);
+
+                float BonusPay = (SalesAmount * BONUS_RATE);
+                float TotalPay = (SalesAmount + BonusPay);
+
+                if (SalesAmount > SALES_QUOTA){
+                Console.WriteLine("Bonus Pay : " + BonusPay);
+                Console.WriteLine("Total Pay : " + TotalPay);
+                }
+
+                else{
+                Console.WriteLine("Bonus Pay : ");
+                Console.WriteLine("Total Pay : ");
+                }
+
+                Console.WriteLine("");
+                Console.Write("Try Another [y/n] : ");
+                ask = Console.ReadLine();
+                Console.WriteLine("");
+
+                if(ask.Equals("y")){
+                }
+
+                else if(ask.Equals("n")){
+                Environment.Exit(0);
+                }
+
+          }while(true);
+    }
+  }
+}
