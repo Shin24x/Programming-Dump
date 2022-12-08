@@ -1,0 +1,30 @@
+using System;     
+
+namespace Main 
+{  
+    class Program  
+    {  
+        static void Main(string[] args)  
+        {  
+            int i=0;
+            int[] array;
+            Console.Write("Input the number of elements to be stored in the array: ");
+            int nums = int.Parse(Console.ReadLine());
+            array = new int[nums];
+
+            while (i < nums)
+            {
+                
+                Console.Write("Element - " + i + ": ");
+                array[i] = int.Parse(Console.ReadLine());
+                i++;
+            }
+
+            Console.Write("Enter a number to search: ");  
+            int number = int.Parse(Console.ReadLine());  
+  
+            int occurrences = array.Count(x => x == number);  
+            Console.WriteLine("{0} occurs {1} times", number, occurrences);  
+        }  
+    }  
+}
