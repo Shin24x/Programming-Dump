@@ -1,0 +1,101 @@
+using System;
+
+namespace Main
+{
+    class Movie
+    {
+        private string MovieName;
+        private string Genre;
+        private int Rating;
+
+        public Movie (string MovieName, string Genre, int Rating){
+            MovieName = Name;
+            Genre = Genres;
+            Rating = Ratings;
+        }
+
+        public string Name{
+            get { return MovieName; }
+            set {
+                while (string.IsNullOrEmpty(value))
+                {
+                    Console.WriteLine("Title is required! Please enter movie name");
+                    Console.Write("Enter Title: ");
+                    value = Console.ReadLine();
+                }
+                MovieName = value;
+            }
+        }
+
+        public string Genres
+        {
+            get { return Genre; }
+            set {
+                if(value == "Comedy" || value == "Drama" || value == "Action" || value == "Sci-Fi" || value == "Horror"){
+                Genre = value;
+                }
+            }
+        }
+        public int Ratings
+        {
+            get { return Rating; }
+            set { while (value<0 || value >5) 
+            Rating = value; }
+        }
+
+        public void displayMovieInfo(int num){
+            Console.WriteLine("Movie "+ num);
+            Console.WriteLine("Name: "+ Name);
+            Console.WriteLine("Genre: "+ Genre);
+            Console.WriteLine("Rating: "+ Rating);
+            Console.WriteLine("");
+            Console.WriteLine("Movie Summary: " + Name + " is classified as " + Genre + " movie with viewer rating of " + Rating);
+        }
+    }
+}
+
+
+using System;
+
+namespace Main
+{
+    public class MovieTest
+    {
+        public static void Main()
+        {
+            Movie m1 = new Movie("Name", "Genre", 5);
+            Console.Write("Enter Title: ");
+            m1.Name = Console.ReadLine();
+            Console.Write("Enter Genre: ");
+            m1.Genres = Console.ReadLine();
+            Console.Write("Enter Rating: ");
+            m1.Ratings = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("");
+            
+
+            Movie m2 = new Movie("Name", "Genre", 5);
+            Console.Write("Enter Title: ");
+            m2.Name = Console.ReadLine();
+            Console.Write("Enter Genre: ");
+            m2.Genres = Console.ReadLine();
+            Console.Write("Enter Rating: ");
+            m2.Ratings = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("");
+
+
+            Movie m3 = new Movie("Name", "Genre", 5);
+            Console.Write("Enter Title: ");
+            m3.Name = Console.ReadLine();
+            Console.Write("Enter Genre: ");
+            m3.Genres = Console.ReadLine();
+            Console.Write("Enter Rating: ");
+            m3.Ratings = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("");
+
+            m1.displayMovieInfo(1);
+            m2.displayMovieInfo(2);
+            m3.displayMovieInfo(3);
+
+        }
+    }
+}
