@@ -1,0 +1,93 @@
+ //PRATCICE TASK
+         //Create a method oriented program that will accept SetStudentInfo(), InputGrades()
+         //ComputeGPA() and DisplayEquivalentGrade();
+
+         //Test Case:
+         /*Enter Student Name: Arsh Supee
+           Course   : BSCS
+           Section  : CS204
+           Midterm Grade : 98
+           Finals Grade  : 98
+           =====================
+            GPA is: 98.00
+            Equivalent Grade is: 1.00
+         */
+
+using System;
+
+    namespace  Project5
+    {
+        class Program
+        {
+               public static void SetStudInfo(string fn="", string course="", string section="")
+               {
+                Console.Write("Enter Name:");
+                fn = Console.ReadLine();
+                Console.Write("Course:");
+                course = Console.ReadLine();
+                Console.Write("Section:");
+                section = Console.ReadLine();
+               }
+
+               public static double InputMidterm(double m=0.00)
+               {
+                return m;
+               }
+
+                public static double InputFinals(double f=0.00)
+               {
+                return f;
+               }
+
+               public static double ComputeGPA(double m,double f)
+               {
+                   double gpa=0.00;
+                   gpa = (m + f)/2;
+                   return gpa;
+               }
+
+                public static void DisplayEquivalent(double m,double f)
+               {
+                
+                String grade = "";
+                double gpa = 0.00;
+                gpa = (m + f)/2;
+
+                if(gpa>=96)
+                    grade = "1.00";
+                else if(gpa >= 93)
+                    grade = "1.25";
+                else if(gpa >= 89)
+                    grade = "1.50";
+                else if(gpa >= 86)
+                    grade = "1.75";
+                else if(gpa >= 82)
+                    grade = "2.00";
+                else if(gpa >= 79)
+                    grade = "2.25";
+                else if(gpa >= 77)
+                    grade = "2.50";
+                else if(gpa >= 75)
+                    grade = "3.00";
+                else
+                    grade = "5.00";
+
+                Console.WriteLine("Equivalent Grade is: " + grade);
+               }
+               static void Main(string[] args)
+               {
+                double m,f;
+                SetStudInfo();
+                Console.Write("Midterm:");
+                m = Convert.ToDouble(Console.ReadLine());
+                Console.Write("Finals:");
+                f = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("GPA is:" + ComputeGPA(InputMidterm(m),InputFinals(f)));
+                DisplayEquivalent(m,f);
+                
+
+               }
+
+        }
+        
+    } 
