@@ -1,0 +1,36 @@
+using System;
+
+namespace Main {
+   class Rectangle {
+      
+      // member variables
+      double length;
+      double width;
+      
+      public void Acceptdetails() {
+         length = 1;    
+         width = 1;
+      }
+      public double GetArea() {
+         return length * width; 
+      }
+
+      public double GetPerimeter() {
+         return 2 * (length + width); 
+      }
+      public void Display() {
+         Console.WriteLine("Length: {0}", length);
+         Console.WriteLine("Width: {0}", width);
+         Console.WriteLine("Area: {0}", GetArea());
+         Console.WriteLine("Perimeter: {0}", GetPerimeter());
+      }
+   }
+   class Test {
+      static void Main(string[] args) {
+         Rectangle r = new Rectangle();
+         r.Acceptdetails();
+         r.Display();
+         Console.ReadLine(); 
+      }
+   }
+}
