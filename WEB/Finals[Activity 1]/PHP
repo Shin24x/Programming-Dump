@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Finals[Activity 1]</title>
+    </head>
+<body>
+
+<?php
+$i = $_GET['color'];
+if($i == "red"){
+    echo "<font color='#FF0000'>$_GET[text]</font>";
+}
+if($i == "blue"){
+    echo "<font color='#0000FF'>$_GET[text]</font>";
+}
+if($i == "green"){
+    echo "<font color='#00FF00'>$_GET[text]</font>";
+}
+?>
+
+<?php
+$i = $_GET['font'];
+if($i == "arial"){
+    echo '<html style="font-family: Arial">';
+}
+if($i == "lucida"){
+    echo '<html style="font-family: Lucida Console">';
+}   
+if($i == "times"){
+    echo '<html style="font-family: "Times New Roman">';
+}
+?>
+
+<?php
+$i = $_GET['bg'];
+if($i == "yellow"){
+    echo '<body style="background-color:yellow">';
+}
+if($i == "orange"){
+    echo '<body style="background-color:orange">';
+}
+if($i == "pink"){
+    echo '<body style="background-color:pink">';
+}
+?>
+
+</body>
+</html>
