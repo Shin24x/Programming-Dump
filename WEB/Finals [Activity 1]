@@ -1,0 +1,74 @@
+===HTML FILE===
+<html>
+<body>
+
+<form action="Activity 4.php" method="get">
+    <label for="font">Choose a Font:</label><br>
+        <input type="radio" name="font" value="hel">Helvetica<br>
+        <input type="radio" name="font" value="bs">Brush Script MT<br>
+        <input type="radio" name="font" value="cn">Courier New<br>
+    <br>
+      <label for="color">Choose a Color:</label><br>
+        <input type="radio" name="color" value="yellow">Yellow<br>
+        <input type="radio" name="color" value="blue">Blue<br>
+        <input type="radio" name="color" value="orange">Orange<br>
+    <br>
+        <label for="bg">Choose Background Color:</label><br>
+        <input type="radio" name="bg" value="pink">Pink<br>
+        <input type="radio" name="bg" value="red">Red<br> 
+        <input type="radio" name="bg" value="lime">Lime
+    <br><br>
+    <label for="bg">Input some text</label><br>
+    <textarea id="texts" name="text" rows="4" cols="30"></textarea>
+    <br><br>
+      <input type="submit">
+</form>
+
+</body>
+</html>
+
+===PHP FILE===
+<html>
+<body>
+
+<?php
+$i = $_GET['color'];
+if($i == "yellow"){
+    echo "<h1><font color='yellow'>$_GET[text]</font></h1>";
+}
+if($i == "blue"){
+    echo "<h1><font color='blue'>$_GET[text]</font></h1>";
+}
+if($i == "orange"){
+    echo "<h1><font color='orange'>$_GET[text]</font></h1>";
+}
+?>
+
+<?php
+$i = $_GET['font'];
+if($i == "hel"){
+    echo '<html style="font-family: Helvetica">';
+}
+if($i == "bs"){
+    echo '<html style="font-family: Brush Script MT">';
+}   
+if($i == "cn"){
+    echo '<html style="font-family: Courier New">';
+}
+?>
+
+<?php
+$i = $_GET['bg'];
+if($i == "pink"){
+    echo '<body style="background-color:pink">';
+}
+if($i == "red"){
+    echo '<body style="background-color:red">';
+}
+if($i == "lime"){
+    echo '<body style="background-color:lime">';
+}
+?>
+
+</body>
+</html>
