@@ -11,11 +11,11 @@ namespace Main {
          length = 1;    
          width = 1;
       }
-      public double GetArea() {
+      public double GetArea(double length, double width) {
          return length * width; 
       }
 
-      public double GetPerimeter() {
+      public double GetPerimeter(double length, double width) {
          return 2 * (length + width); 
       }
       public void Display() {
@@ -27,7 +27,7 @@ namespace Main {
    }
    class Test {
       static void Main(string[] args) {
-         Rectangle r = new Rectangle();
+         Rectangle r = new Rectangle(1,1);
          r.Acceptdetails();
          r.Display();
          Console.ReadLine(); 
