@@ -1,74 +1,67 @@
 ===HTML FILE===
+<!DOCTYPE html>
 <html>
+    <head>
+    <title>Customize Your Text</title>
+    </head>
 <body>
 
-<form action="Activity 4.php" method="get">
-    <label for="font">Choose a Font:</label><br>
-        <input type="radio" name="font" value="hel">Helvetica<br>
-        <input type="radio" name="font" value="bs">Brush Script MT<br>
-        <input type="radio" name="font" value="cn">Courier New<br>
-    <br>
-      <label for="color">Choose a Color:</label><br>
-        <input type="radio" name="color" value="yellow">Yellow<br>
-        <input type="radio" name="color" value="blue">Blue<br>
-        <input type="radio" name="color" value="orange">Orange<br>
-    <br>
-        <label for="bg">Choose Background Color:</label><br>
-        <input type="radio" name="bg" value="pink">Pink<br>
-        <input type="radio" name="bg" value="red">Red<br> 
-        <input type="radio" name="bg" value="lime">Lime
+    <h1>Customize Your Text</h1>
+
+    <form action="nextpage.html" method="get">
+
+    <label for="font">Choose a font:</label>
+        <select name="font">
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+        </select>
     <br><br>
-    <label for="bg">Input some text</label><br>
-    <textarea id="texts" name="text" rows="4" cols="30"></textarea>
+
+    <label for="font-color">Choose a font color:</label>
+        <select name="font-color">
+            <option value="black">Black</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+        </select>
     <br><br>
-      <input type="submit">
-</form>
+
+    <label for="bg-color">Choose a background color:</label>
+        <select name="bg-color">
+            <option value="white">White</option>
+            <option value="gray">Gray</option>
+            <option value="yellow">Yellow</option>
+        </select>
+    <br><br>
+
+    <label for="text-area">Enter your text:</label><br>
+        <textarea name="text-area" rows="5" cols="40"></textarea>
+    <br><br>
+
+    <input type="submit" value="Submit">
+
+    </form> 
 
 </body>
 </html>
+
 
 ===PHP FILE===
+<!DOCTYPE html>
 <html>
+    <head>
+        <title>Your Customized Text</title>
+    </head>
 <body>
 
-<?php
-$i = $_GET['color'];
-if($i == "yellow"){
-    echo "<h1><font color='yellow'>$_GET[text]</font></h1>";
-}
-if($i == "blue"){
-    echo "<h1><font color='blue'>$_GET[text]</font></h1>";
-}
-if($i == "orange"){
-    echo "<h1><font color='orange'>$_GET[text]</font></h1>";
-}
-?>
+<h1>Your Customized Text</h1>
 
-<?php
-$i = $_GET['font'];
-if($i == "hel"){
-    echo '<html style="font-family: Helvetica">';
-}
-if($i == "bs"){
-    echo '<html style="font-family: Brush Script MT">';
-}   
-if($i == "cn"){
-    echo '<html style="font-family: Courier New">';
-}
-?>
-
-<?php
-$i = $_GET['bg'];
-if($i == "pink"){
-    echo '<body style="background-color:pink">';
-}
-if($i == "red"){
-    echo '<body style="background-color:red">';
-}
-if($i == "lime"){
-    echo '<body style="background-color:lime">';
-}
-?>
+    <p style="font-family: <?php echo $_GET["font"]; ?>;
+              color: <?php echo $_GET["font-color"]; ?>;
+              background-color: <?php echo $_GET["bg-color"]; ?>;">
+              <?php echo $_GET["text-area"]; ?>
+</p>
 
 </body>
 </html>
+
