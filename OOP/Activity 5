@@ -38,11 +38,13 @@ namespace Main
             }
         }
         public int Ratings
-        {
+        {   
             get { return Rating; }
-            set { while (value<0 || value >5) 
-            Rating = value; }
-        }
+            set {
+                if (value >= 0 || value <= 5){
+            Rating = value;}
+        }  
+    }
 
         public void displayMovieInfo(int num){
             Console.WriteLine("Movie "+ num);
