@@ -1,0 +1,69 @@
+public class RegularPolygon
+{
+    // Properties to store the length and number of sides of the polygon
+    public int Length { get; set; }
+    public int Sides { get; set; }
+
+    // Constructor to initialize the properties
+    public RegularPolygon(int length, int sides)
+    {
+        this.Length = length;
+        this.Sides = sides;
+    }
+
+    // Method to calculate the perimeter of the regular polygon
+    public virtual double CalculatePerimeter()
+    {
+        return this.Length * this.Sides;
+    }
+}
+
+public class Square : RegularPolygon
+{
+    // Constructor to initialize the properties inherited from the base class
+    public Square(int length) : base(length, 4)
+    {
+    }
+
+    // Method to calculate the area of the square
+    public double CalculateArea()
+    {
+        return Math.Pow(this.Length, 2);
+    }
+}
+
+public class Rectangle : RegularPolygon
+{
+    // Properties to store the width and height of the rectangle
+    public int Width { get; set; }
+    public int Height { get; set; }
+
+    // Constructor to initialize the properties inherited from the base class and the rectangle's width and height
+    public Rectangle(int length, int width, int height) : base(length, 4)
+    {
+        this.Width = width;
+        this.Height = height;
+    }
+
+    // Method to calculate the area of the rectangle
+    public double CalculateArea()
+    {
+        return this.Width * this.Height;
+    }
+}
+
+public class Test
+{
+    public static void Main()
+    {
+        // Create a square with a side length of 200
+        Square sq = new Square(200);
+        Console.WriteLine("Area of Square: " + sq.CalculateArea());
+        Console.WriteLine("Perimeter: " + sq.CalculatePerimeter());
+
+        // Create a rectangle with a length of 100, width of 50, and height of 40
+        Rectangle rect = new Rectangle(100, 500, 40);
+        Console.WriteLine("Area of Rectangle: " + rect.CalculateArea());
+        Console.WriteLine("Perimeter: " + rect.CalculatePerimeter());
+    }
+}
