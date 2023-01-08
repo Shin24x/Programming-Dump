@@ -1,0 +1,11 @@
+C:\Users\DICT\Desktop\OOP\VS\Set B\Set B\bin\Debug\Set B.exe.config
+C:\Users\DICT\Desktop\OOP\VS\Set B\Set B\bin\Debug\Set B.exe
+C:\Users\DICT\Desktop\OOP\VS\Set B\Set B\bin\Debug\Set B.pdb
+C:\Users\DICT\Desktop\OOP\VS\Set B\Set B\obj\Debug\Set B.csproj.AssemblyReference.cache
+C:\Users\DICT\Desktop\OOP\VS\Set B\Set B\obj\Debug\Set B.csproj.SuggestedBindingRedirects.cache
+C:\Users\DICT\Desktop\OOP\VS\Set B\Set B\obj\Debug\Set_B.Form1.resources
+C:\Users\DICT\Desktop\OOP\VS\Set B\Set B\obj\Debug\Set_B.Properties.Resources.resources
+C:\Users\DICT\Desktop\OOP\VS\Set B\Set B\obj\Debug\Set B.csproj.GenerateResource.cache
+C:\Users\DICT\Desktop\OOP\VS\Set B\Set B\obj\Debug\Set B.csproj.CoreCompileInputs.cache
+C:\Users\DICT\Desktop\OOP\VS\Set B\Set B\obj\Debug\Set B.exe
+C:\Users\DICT\Desktop\OOP\VS\Set B\Set B\obj\Debug\Set B.pdb
